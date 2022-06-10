@@ -75,6 +75,9 @@ type State = {
 
 const IPHONE_XS_HEIGHT = 812; // iPhone X and XS
 const IPHONE_XR_HEIGHT = 896; // iPhone XR and XS Max
+const IPHONE12_HEIGHT = 844;
+const IPHONE12_MAX_HEIGHT = 926;
+const IPHONE12_MINI_HEIGHT = 780;
 const { width: WINDOW_WIDTH, height: WINDOW_HEIGHT } = Dimensions.get('window');
 const IS_IPHONE_X =
   Platform.OS === 'ios' &&
@@ -85,7 +88,10 @@ const IS_IPHONE_X =
   (WINDOW_HEIGHT === IPHONE_XS_HEIGHT ||
     WINDOW_WIDTH === IPHONE_XS_HEIGHT ||
     WINDOW_HEIGHT === IPHONE_XR_HEIGHT ||
-    WINDOW_WIDTH === IPHONE_XR_HEIGHT);
+    WINDOW_WIDTH === IPHONE_XR_HEIGHT ||
+    WINDOW_HEIGHT === IPHONE12_HEIGHT ||
+    WINDOW_HEIGHT === IPHONE12_MAX_HEIGHT ||
+    WINDOW_HEIGHT === IPHONE12_MINI_HEIGHT);
 
 const EaseInOut = Easing.inOut(Easing.ease);
 
